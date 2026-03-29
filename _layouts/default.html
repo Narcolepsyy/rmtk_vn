@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="vi">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="{{ site.description }}">
   <title>{% if page.kanji %}{{ page.kanji}} - {{ page.keyword }} - {% endif %}{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link href="{% if page.type != 'index' %}../{% endif %}assets/img/favicon.ico" rel="icon">
   <link href="{% if page.type != 'index' %}../{% endif %}assets/css/style.css" media="screen, projection" rel="stylesheet" type="text/css">
 </head>

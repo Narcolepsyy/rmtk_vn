@@ -1,13 +1,18 @@
-title: rtk-search
-author: Mạnh Tài
-url: http://hochanh.github.io/rtk-search
-description: "rtk-search: http://hochanh.github.io/rtk-search"
+title: RMTK VN
+description: "RMTK VN — Từ điển Kanji Hán-Việt theo phương pháp Remembering the Kanji"
+url: "https://narcolepsyy.github.io"
+baseurl: "/rmtk_vn"
 
 permalink: /:title/
 
 exclude:
  - README.md
  - CNAME
-
-gems:
- - jekyll-redirect-from
+ - _pipeline
+ - KanjiDictVN
+ - serve.sh
+ - "*.py"
+ - .env
+ - Gemfile
+ - Gemfile.lock
+ - rtk-search

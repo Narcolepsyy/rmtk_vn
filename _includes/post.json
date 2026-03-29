@@ -1,6 +1,10 @@
 {
-  "id" : "{{ post.v4 }}",
-  "kanji" : "{{ post.kanji }}",
-  "keyword" : "{{ post.keyword | remove:'"' }}",
-  "elements" : "{{ post.elements | remove:'"' }}",
+  "id" : {{ post.v4 | jsonify }},
+  "kanji" : {{ post.kanji | jsonify }},
+  "keyword" : {{ post.keyword | jsonify }},
+  "elements" : {{ post.elements | jsonify }},
+  "hanviet" : {{ post.hanviet | jsonify }},
+  "v4" : {{ post.v4 | jsonify }},
+  "onYomi" : {{ post.on-yomi | jsonify }},
+  "kunYomi" : {{ post.kun-yomi | jsonify }}
 }

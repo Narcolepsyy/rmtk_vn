@@ -1,30 +1,82 @@
 ---
 layout: default
 type: index
-redirect_to: "https://hochanh.github.io/rtk"
 ---
 
-<h1>{{ site.title }}</h1>
-<hr>
-
-
-<div id="search-box">
-	<input type="search" id="search-query" name="q" placeholder="Search kanji by keyword..." autocomplete="off">
-	<button type="submit" id="search-button">Search</button>
-	
-	<div id="search-results" style="display: none;">
-			<div class="entries"></div>
-	</div>
+<div class="search-hero">
+  <div class="hero-glow"></div>
+  <h1 class="site-title">
+    <span class="title-accent">RMTK</span> <span class="title-secondary">VN</span>
+  </h1>
+  <p class="site-subtitle">Remembering the Kanji — Từ điển Kanji Hán-Việt</p>
+  <div class="hero-stats">
+    <span class="stat"><span class="stat-num">3030</span> Kanji</span>
+    <span class="stat-sep">·</span>
+    <span class="stat"><span class="stat-num">2200</span> RTK1</span>
+    <span class="stat-sep">·</span>
+    <span class="stat"><span class="stat-num">830</span> RTK3</span>
+  </div>
 </div>
 
-<hr>
+<div id="search-container">
+  <div id="search-box">
+    <div class="search-input-wrapper">
+      <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="search" id="search-query" name="q" placeholder="Tìm theo từ khóa, Hán-Việt, số frame (#1), hoặc chữ Kanji..." autocomplete="off" autofocus>
+      <button type="button" id="search-clear" title="Xóa">✕</button>
+      <kbd class="search-shortcut" title="Nhấn / để tìm kiếm">/</kbd>
+    </div>
+  </div>
 
-<nav class="pagination" role="navigation">
-	<a class="btn btn-blue" href="rtk1-v6/index.html">rtk1-v6</a>
-	<a class="btn btn-blue" href="rtk3-remain/index.html">rtk3-remain</a>
+  <div class="filter-bar">
+    <button class="filter-chip active" data-filter="all">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+      Tất cả
+    </button>
+    <button class="filter-chip" data-filter="keyword">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg>
+      Từ khóa
+    </button>
+    <button class="filter-chip" data-filter="hanviet">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7l5 10M15 7l5 10M7.5 13h9"/></svg>
+      Hán-Việt
+    </button>
+    <button class="filter-chip" data-filter="frame">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18"/></svg>
+      Frame #
+    </button>
+  </div>
+
+  <div id="result-count"></div>
+
+  <div id="search-results" style="display: none;">
+    <div class="entries"></div>
+  </div>
+</div>
+
+<nav class="nav-section" role="navigation">
+  <a class="nav-card" href="rtk1-v6/index.html">
+    <div class="nav-card-icon-wrap">
+      <span class="nav-card-icon">漢</span>
+    </div>
+    <div class="nav-card-body">
+      <span class="nav-card-label">RTK 1 — Tập 6</span>
+      <span class="nav-card-count">2200 Kanji cơ bản</span>
+    </div>
+    <svg class="nav-card-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+  </a>
+  <a class="nav-card" href="rtk3-remain/index.html">
+    <div class="nav-card-icon-wrap">
+      <span class="nav-card-icon">字</span>
+    </div>
+    <div class="nav-card-body">
+      <span class="nav-card-label">RTK 3 — Bổ sung</span>
+      <span class="nav-card-count">830 Kanji nâng cao</span>
+    </div>
+    <svg class="nav-card-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+  </a>
 </nav>
 
-<script src="assets/js/jquery.min.js"></script> 
-<script src="assets/js/lunr.min.js"></script>
-<script src="assets/js/app.js"></script> 
+<script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/search.js"></script>
+<script src="assets/js/app.js"></script>

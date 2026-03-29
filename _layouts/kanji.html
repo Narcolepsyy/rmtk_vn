@@ -6,8 +6,6 @@ layout: default
 <a href="../index.html">{{ page.kanji }}</a>
 </h1>
 
-<hr />
-
 <h1>
 <span class="left-arrow">
   <a href="../{% if page.prev != "" %}{{ page.prev }}/index.html{% endif %}">&larr;</a>
@@ -22,32 +20,33 @@ layout: default
 <div id="kanjiViewer">
   <div id="draw"></div>
   <div id="sample-btn">
-    <button id="p">‹</button>
-    <button id="s">■</button>
-    <button id="g">▶</button>
-    <button id="n">›</button>
-    <button id="r">✕</button>
+    <button id="p" title="Nét trước">‹</button>
+    <button id="s" title="Tạm dừng">■</button>
+    <button id="g" title="Phát">▶</button>
+    <button id="n" title="Nét tiếp">›</button>
+    <button id="r" title="Xóa">✕</button>
   </div>
 </div>
 
 <h3>On-Yomi: <a>{{ page.on-yomi }}</a> {% if page.kun-yomi %}— Kun-Yomi: <a>{{ page.kun-yomi }}</a>{% endif %}</h3>
+<h3>Hán-Việt: <a>{{ page.hanviet }}</a></h3>
 
+{% if page.elements %}
+<h3>Thành phần: <a>{{ page.elements }}</a></h3>
+{% endif %}
 
 	{% if page.primit %}
-    <h2>Primitive:</h2>
+    <h2>Bộ thủ gốc:</h2>
     <p>{{ page.primit }}</p>
 	{% endif %}
 
-<h2>Koohii stories:</h2>
+<h2>Câu chuyện Koohii:</h2>
 {{ content }}
 
 <hr>
 <nav class="pagination" role="navigation">
 <a href="../{% if page.prev != "" %}{{ page.prev }}/index.html{% endif %}" class="btn btn-blue">&laquo;</a>
-<a class="btn btn-blue" href="../index.html">/</a>
-<a class="btn btn-blue" href="../rtk1-v6/index.html">rtk1-v6</a>
+<a class="btn btn-blue" href="../index.html">🏠</a>
+<a class="btn btn-blue" href="../rtk1-v6/index.html">RTK1</a>
 <a href="../{% if page.next != "" %}{{ page.next }}/index.html{% endif %}" class="btn btn-blue">&raquo;</a>
 </nav>
-
-
-

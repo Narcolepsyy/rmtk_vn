@@ -13,23 +13,29 @@ layout: default
 <div id="kanjiViewer">
   <div id="draw"></div>
   <div id="sample-btn">
-    <button id="p">‹</button>
-    <button id="s">■</button>
-    <button id="g">▶</button>
-    <button id="n">›</button>
-    <button id="r">✕</button>
+    <button id="p" title="Nét trước">‹</button>
+    <button id="s" title="Tạm dừng">■</button>
+    <button id="g" title="Phát">▶</button>
+    <button id="n" title="Nét tiếp">›</button>
+    <button id="r" title="Xóa">✕</button>
   </div>
 </div>
 
 {% if page.on-yomi %}
-<h3>On-Yomi: <a>{{ page.on-yomi }}</a></h3>
+<h3>On-Yomi: <a>{{ page.on-yomi }}</a> {% if page.kun-yomi %}— Kun-Yomi: <a>{{ page.kun-yomi }}</a>{% endif %}</h3>
+{% endif %}
+{% if page.hanviet %}
+<h3>Hán-Việt: <a>{{ page.hanviet }}</a></h3>
+{% endif %}
+
+{% if page.elements %}
+<h3>Thành phần: <a>{{ page.elements }}</a></h3>
 {% endif %}
 
 {{ content }}
 
 <hr>
 <nav class="pagination" role="navigation">
-<a class="btn btn-blue" href="../index.html">/</a>
-<a class="btn btn-blue" href="../rtk3-remain/index.html">rtk3-remain</a>
+<a class="btn btn-blue" href="../index.html">🏠</a>
+<a class="btn btn-blue" href="../rtk3-remain/index.html">RTK3</a>
 </nav>
-

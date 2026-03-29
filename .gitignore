@@ -1,4 +1,33 @@
-_site
-.sass-cache
-.Rproj.user
+# Jekyll build output
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Old subfolder (migrated to root)
+rtk-search/
+
+# External dependency
+KanjiDictVN/
+
+# Pipeline data
+_pipeline/raw_data/*.rds
+_pipeline/.venv/
+_pipeline/batch/
+
+# Secrets
+.env
+
+# R project files
+_code/
+.Rproj.user/
 .Rhistory
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+*~
